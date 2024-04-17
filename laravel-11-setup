@@ -7,7 +7,6 @@ echo
 apt-get install -y curl git zip unzip software-properties-common dirmngr ca-certificates apt-transport-https
 apt update && apt upgrade -y
 curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup |  bash -s -- --mariadb-server-version=10.11  # LTS version
-#curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup |  bash -s -- --mariadb-server-version=11.4  # Rolling version
 apt install -y nginx mariadb-server mariadb-client
 mysql -uroot -e "CREATE DATABASE laravel_db; CREATE USER 'webmaster'@'localhost' IDENTIFIED BY 'Lara@2020'; GRANT ALL ON laravel_db.* TO 'webmaster'@'localhost';"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' IDENTIFIED BY 'oum202020'; FLUSH PRIVILEGES;"
