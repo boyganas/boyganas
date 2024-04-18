@@ -8,3 +8,5 @@ This is a script for Laravel 11 installation.
 sudo apt update
 sudo apt install git
 git clone https://github.com/boyganas/laravel-11-setup.git
+sudo su
+bash laravel-11-setup-mariadb10
